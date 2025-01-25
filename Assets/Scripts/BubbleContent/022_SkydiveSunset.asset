@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: 022_SkydiveSunset
   m_EditorClassIdentifier: 
   anxiety: 0
-  distrust: 0
-  fomo: 0
-  loneliness: 0
+  distrust: -3
+  fomo: 2
+  loneliness: 3
   doomScrolling: 1
   bubbleImage: {fileID: 0}

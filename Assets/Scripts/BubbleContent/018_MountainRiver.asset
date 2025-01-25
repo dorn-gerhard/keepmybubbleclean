@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb2513f8d4862464096a29ec456d0dcd, type: 3}
   m_Name: 018_MountainRiver
   m_EditorClassIdentifier: 
-  anxiety: 0
+  anxiety: -2
   distrust: 0
   fomo: 0
-  loneliness: 0
+  loneliness: -2
   doomScrolling: 1
   bubbleImage: {fileID: 21300000, guid: b254a5bbcf39940b092c2cd828237c24, type: 3}

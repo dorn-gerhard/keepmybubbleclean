@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb2513f8d4862464096a29ec456d0dcd, type: 3}
   m_Name: 009_MuskSalute
   m_EditorClassIdentifier: 
-  anxiety: 0
+  anxiety: 5
   distrust: 0
   fomo: 0
-  loneliness: 0
+  loneliness: -1
   doomScrolling: 1
-  bubbleImage: {fileID: 0}
+  bubbleImage: {fileID: 21300000, guid: e5f38d79315114bc982be57dfa26d010, type: 3}

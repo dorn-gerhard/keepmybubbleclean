@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anxiety: 0
   distrust: 0
-  fomo: 0
+  fomo: -3
   loneliness: 0
-  doomScrolling: 1
+  doomScrolling: 2
   bubbleImage: {fileID: 21300000, guid: 8207df02a19054582bef0c798f4b79a2, type: 3}
