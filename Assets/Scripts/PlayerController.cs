@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviour
                     ((bubble.state == BubbleState.FLOATING || (bubble.state == BubbleState.STICKY))))
                 {
                     // Debug.Log("bubble selected");
+                    bubble.isDragged = true;
                     selectedObject = targetObject.transform.gameObject;
                     offset = selectedObject.transform.position - mousePosition;
                 }
@@ -53,6 +54,7 @@ public class PlayerController : MonoBehaviour
             )
             {
                 // Debug.Log("bubble released");
+                selectedObject.GetComponent<Bubble>().isDragged = false;
                 selectedObject = null;
 
             }
