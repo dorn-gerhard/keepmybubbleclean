@@ -21,10 +21,10 @@ public class PlayerController : MonoBehaviour
         {
             Collider2D targetObject = Physics2D.OverlapPoint(mousePosition);
 
-            if ((targetObject is not null))
+            if (targetObject)
             {
-                var bubble = targetObject.GetComponent<Bubble>();
-                if ((bubble is not null) &
+                var bubble = targetObject?.GetComponent<Bubble>();
+                if ((bubble) &&
                     ((bubble.state == BubbleState.FLOATING || (bubble.state == BubbleState.STICKY))))
                 {
                     Debug.Log("bubble selected");

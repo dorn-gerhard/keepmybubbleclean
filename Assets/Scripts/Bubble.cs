@@ -46,7 +46,7 @@ public class Bubble : MonoBehaviour
     }
     public void Update()
     {
-        if (state == BubbleState.FLOATING) // Add velocity to center
+        if ((state == BubbleState.FLOATING) || (state == BubbleState.STICKY)) // Add velocity to center
         {
             Vector2 velocity = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y);
             velocity.Normalize();
@@ -54,22 +54,36 @@ public class Bubble : MonoBehaviour
         }
     }
 
-    public async void OnAttachedToMindBubble()
+    public IEnumerator OnAttachedToMindBubble()
     {
         state = BubbleState.STICKY;
         // shring radius
         float radius = GetComponent<CircleCollider2D>().radius;
         Debug.Log("start shrinking bubble Collider");
-        while (radius > 0.001f)
+        while (true)
         {
-            await WaitForSecondsAsync(0.1f);
-            circleCollider.radius -= 0.01f;
+
+            if (circleCollider.radius < 0.01f)
+            {
+                circleCollider.enabled = false;
+                Debug.Log("Collider disabled");
+                yield return new WaitForSeconds(1.5f);
+                circleCollider.radius = 0.5f;
+                circleCollider.enabled = true;
+                Debug.Log("Collider enabled");
+                state = BubbleState.INSIDE;
+
+                break;
+            }
+            else
+            {
+                yield return new WaitForSeconds(0.1f);
+                circleCollider.radius -= 0.01f;
+            }
 
         }
-        circleCollider.enabled = false;
-        await WaitForSecondsAsync(0.5f);
-        circleCollider.radius = 0.5f;
-        circleCollider.enabled = true;
+       
+
     }
     async Task WaitForSecondsAsync(float delay)
     {
