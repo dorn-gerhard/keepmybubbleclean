@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 using static UnityEngine.UIElements.UxmlAttributeDescription;
 
@@ -12,12 +14,15 @@ public class Bubble : MonoBehaviour
     public BubbleScriptableObject bubbleData;
     public Rigidbody2D rigidbody;
     public float floatingVelocity = 0.2f;
+    public CircleCollider2D circleCollider;
 
     public bool applyImage = false;
 
-    public void OnStart()
+    public void Start()
     {
         rigidbody = gameObject.GetComponent<Rigidbody2D>();
+        circleCollider = GetComponent<CircleCollider2D>();
+
     }
     public void OnValidate()
     {
@@ -48,8 +53,31 @@ public class Bubble : MonoBehaviour
             gameObject.GetComponent<Rigidbody2D>().velocity = velocity * -floatingVelocity;
         }
     }
-   
-    public static Texture2D RoundCrop(Texture2D sourceTexture)
+
+    public async void OnAttachedToMindBubble()
+    {
+        state = BubbleState.STICKY;
+        // shring radius
+        float radius = GetComponent<CircleCollider2D>().radius;
+        Debug.Log("start shrinking bubble Collider");
+        while (radius > 0.001f)
+        {
+            await WaitForSecondsAsync(0.1f);
+            circleCollider.radius -= 0.01f;
+
+        }
+        circleCollider.enabled = false;
+        await WaitForSecondsAsync(0.5f);
+        circleCollider.radius = 0.5f;
+        circleCollider.enabled = true;
+    }
+    async Task WaitForSecondsAsync(float delay)
+    {
+        await Task.Delay(TimeSpan.FromSeconds(delay));
+    }
+     
+
+public static Texture2D RoundCrop(Texture2D sourceTexture)
     {
         int width = sourceTexture.width;
         int height = sourceTexture.height;

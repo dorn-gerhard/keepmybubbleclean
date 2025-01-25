@@ -5,16 +5,21 @@ using UnityEngine;
 public class Spawnmanager : MonoBehaviour
 {
 
-    public float spawnRate;
+    public float spawnTime = 3.0f;
     public Bubble bubble; // gameobject without values
     public List<BubbleScriptableObject> bubbleContent;
     public bool spawnNow;
+    public int spawnedBubbles = 0;
 
     public RectTransform spawnArea;
     // Start is called before the first frame update
     void Start()
     {
         spawnArea = this.GetComponent<RectTransform>();
+
+        StartCoroutine(SpawnCounter(spawnTime));
+            
+
     }
     private void OnValidate()
     {
@@ -23,6 +28,12 @@ public class Spawnmanager : MonoBehaviour
             Spawn();
             spawnNow = false;
         }
+    }
+
+    public IEnumerator SpawnCounter(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime); Spawn();
+
     }
 
     public void Spawn()
@@ -38,7 +49,12 @@ public class Spawnmanager : MonoBehaviour
         var bubbleCont = bubbleContent[0];
         bubbleContent.RemoveAt(0);
         newBubble.bubbleData = bubbleCont;
-
+        spawnedBubbles += 1;
+        if (spawnedBubbles % 10 == 0)
+        {
+            spawnTime -= 0.1f;
+        }
+        StartCoroutine(SpawnCounter(spawnTime));
 
     }
 }
