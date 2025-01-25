@@ -21,10 +21,16 @@ public class PlayerController : MonoBehaviour
         {
             Collider2D targetObject = Physics2D.OverlapPoint(mousePosition);
 
-            if (targetObject)
+            if ((targetObject is not null))
             {
-                selectedObject = targetObject.transform.gameObject;
-                offset = selectedObject.transform.position - mousePosition;
+                var bubble = targetObject.GetComponent<Bubble>();
+                if ((bubble is not null) &
+                    ((bubble.state == BubbleState.FLOATING || (bubble.state == BubbleState.STICKY))))
+                {
+                    Debug.Log("bubble selected");
+                    selectedObject = targetObject.transform.gameObject;
+                    offset = selectedObject.transform.position - mousePosition;
+                }
             }
         }
         if (Input.GetMouseButtonUp(0) && selectedObject)
