@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb2513f8d4862464096a29ec456d0dcd, type: 3}
   m_Name: 008_RedditVirgin
   m_EditorClassIdentifier: 
-  anxiety: 0
+  anxiety: 1
   distrust: 0
-  fomo: 0
-  loneliness: 0
+  fomo: -2
+  loneliness: 4
   doomScrolling: 1
-  bubbleImage: {fileID: 0}
+  bubbleImage: {fileID: 21300000, guid: 521318a1522ad40c58849ab848131ea6, type: 3}

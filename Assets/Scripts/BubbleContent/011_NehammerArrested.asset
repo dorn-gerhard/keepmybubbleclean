@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: 011_NehammerArrested
   m_EditorClassIdentifier: 
   anxiety: 0
-  distrust: 0
+  distrust: 5
   fomo: 0
-  loneliness: 0
+  loneliness: -1
   doomScrolling: 1
-  bubbleImage: {fileID: 0}
+  bubbleImage: {fileID: 21300000, guid: f14ed37bd674f477e85fe36e1254d880, type: 3}

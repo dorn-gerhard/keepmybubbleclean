@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: 010_ObamaSalute
   m_EditorClassIdentifier: 
   anxiety: 0
-  distrust: 0
+  distrust: 5
   fomo: 0
-  loneliness: 0
+  loneliness: -1
   doomScrolling: 1
-  bubbleImage: {fileID: 0}
+  bubbleImage: {fileID: 21300000, guid: f8769476fcac64b04a98d3d7f7dce7e9, type: 3}

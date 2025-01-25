@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb2513f8d4862464096a29ec456d0dcd, type: 3}
   m_Name: 017_OwlAtSea
   m_EditorClassIdentifier: 
-  anxiety: 0
+  anxiety: -1
   distrust: 0
-  fomo: 0
-  loneliness: 0
-  doomScrolling: 1
+  fomo: 2
+  loneliness: -1
+  doomScrolling: 2
   bubbleImage: {fileID: 21300000, guid: ba1b292e7f9aa4661ba2ce4073d5be0f, type: 3}

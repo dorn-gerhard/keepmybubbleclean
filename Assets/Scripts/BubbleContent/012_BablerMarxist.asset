@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb2513f8d4862464096a29ec456d0dcd, type: 3}
   m_Name: 012_BablerMarxist
   m_EditorClassIdentifier: 
-  anxiety: 0
-  distrust: 0
+  anxiety: 4
+  distrust: 1
   fomo: 0
-  loneliness: 0
+  loneliness: -1
   doomScrolling: 1
-  bubbleImage: {fileID: 0}
+  bubbleImage: {fileID: 21300000, guid: 83f6e6c0a3cd04198a021734c1a543ae, type: 3}

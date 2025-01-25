@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb2513f8d4862464096a29ec456d0dcd, type: 3}
   m_Name: 20_PollutionRiverHouse
   m_EditorClassIdentifier: 
-  anxiety: 0
-  distrust: 0
-  fomo: 0
+  anxiety: 4
+  distrust: -1
+  fomo: -1
   loneliness: 0
   doomScrolling: 1
   bubbleImage: {fileID: 21300000, guid: b22f5067dd5384eba825c326e4ced154, type: 3}

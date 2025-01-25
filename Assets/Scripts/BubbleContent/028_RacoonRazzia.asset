@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eb2513f8d4862464096a29ec456d0dcd, type: 3}
-  m_Name: New Bubble 23
+  m_Name: 028_RacoonRazzia
   m_EditorClassIdentifier: 
   anxiety: 0
-  distrust: 0
-  fomo: 0
-  loneliness: 0
+  distrust: -1
+  fomo: 1
+  loneliness: 1
   doomScrolling: 1
-  bubbleImage: {fileID: 0}
+  bubbleImage: {fileID: 21300000, guid: fb37e7941af19445d814c5a6109541b4, type: 3}

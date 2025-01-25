@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eb2513f8d4862464096a29ec456d0dcd, type: 3}
-  m_Name: New Bubble 24
+  m_Name: 026_TheGreatDictat
   m_EditorClassIdentifier: 
-  anxiety: 0
-  distrust: 0
+  anxiety: 2
+  distrust: -3
   fomo: 0
-  loneliness: 0
+  loneliness: 1
   doomScrolling: 1
-  bubbleImage: {fileID: 0}
+  bubbleImage: {fileID: 21300000, guid: 4858b80e2f30a447395d72eb7217816a, type: 3}

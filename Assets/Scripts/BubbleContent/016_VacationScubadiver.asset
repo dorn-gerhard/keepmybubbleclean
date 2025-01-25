@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: 016_VacationScubadiver
   m_EditorClassIdentifier: 
   anxiety: 0
-  distrust: 0
-  fomo: 0
-  loneliness: 0
+  distrust: -1
+  fomo: 3
+  loneliness: 3
   doomScrolling: 1
   bubbleImage: {fileID: 21300000, guid: 1818d174659034e558d95f033453fa27, type: 3}
