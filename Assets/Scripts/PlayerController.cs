@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
                 if ((bubble) &&
                     ((bubble.state == BubbleState.FLOATING || (bubble.state == BubbleState.STICKY))))
                 {
-                    Debug.Log("bubble selected");
+                    // Debug.Log("bubble selected");
                     selectedObject = targetObject.transform.gameObject;
                     offset = selectedObject.transform.position - mousePosition;
                 }
@@ -39,16 +39,33 @@ public class PlayerController : MonoBehaviour
         if (selectedObject)
         {
             float distanceMoved = Vector3.Distance(mousePosition, lastMousePosition);
-            Debug.Log("moved this much in world space: " + distanceMoved);
+            // Debug.Log("moved this much in world space: " + distanceMoved + " left: " + selectedObject.transform.position.x);
+
+            var leftOfMindBubble = selectedObject.transform.position.x < 0;
+            var movingToLeft = mousePosition.x < lastMousePosition.x;
+            var dropQuickly = (leftOfMindBubble && movingToLeft) || (!leftOfMindBubble && !movingToLeft);
 
             selectedObject.transform.position = new Vector3(mousePosition.x + offset.x, mousePosition.y + offset.y, selectedObject.transform.position.z);
 
-            if (Input.GetMouseButtonUp(0) || distanceMoved > movementThreshold)
+            if (
+                Input.GetMouseButtonUp(0) || 
+                (distanceMoved > movementThreshold && dropQuickly)
+            )
             {
-                Debug.Log("bubble released");
+                // Debug.Log("bubble released");
                 selectedObject = null;
 
             }
+
+            // If dragged over the waste bin, destroy the bubble
+            Collider2D secondTargetObject = Physics2D.OverlapPoint(mousePosition);
+            var wasteBin = secondTargetObject?.GetComponent<WasteBin>();
+            if (wasteBin)
+            {
+                // Debug.Log("waste bin selected");
+                Destroy(selectedObject);
+            }
+
         }
 
         lastMousePosition = mousePosition;
