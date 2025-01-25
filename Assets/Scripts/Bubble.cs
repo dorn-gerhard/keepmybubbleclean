@@ -8,7 +8,7 @@ using static UnityEngine.UIElements.UxmlAttributeDescription;
 public class Bubble : MonoBehaviour
 {
     public BubbleState state = BubbleState.FLOATING;
-    public bool dragable = true; // basically defined by bubble state but helpful flag
+    public bool isDragged = false; // basically defined by bubble state but helpful flag
 
     public bool mystery = true;
     public BubbleScriptableObject bubbleData;
