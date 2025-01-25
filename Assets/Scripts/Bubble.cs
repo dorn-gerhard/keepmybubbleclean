@@ -15,6 +15,7 @@ public class Bubble : MonoBehaviour
     public Rigidbody2D rigidbody;
     public float floatingVelocity = 0.2f;
     public CircleCollider2D circleCollider;
+    public SpriteRenderer renderer;
 
     public bool applyImage = false;
 
@@ -22,6 +23,7 @@ public class Bubble : MonoBehaviour
     {
         rigidbody = gameObject.GetComponent<Rigidbody2D>();
         circleCollider = GetComponent<CircleCollider2D>();
+        SetImage();
 
     }
     public void OnValidate()
@@ -36,7 +38,7 @@ public class Bubble : MonoBehaviour
 
     public void SetImage()
     {
-        SpriteRenderer renderer = GetComponent<SpriteRenderer>();
+         // GetComponent<SpriteRenderer>();
         Texture2D skin = bubbleData.bubbleImage.texture;
         MaterialPropertyBlock block = new MaterialPropertyBlock();
         block.SetTexture("_MainTex", skin);
@@ -70,8 +72,10 @@ public class Bubble : MonoBehaviour
                 yield return new WaitForSeconds(1.5f);
                 circleCollider.radius = 0.5f;
                 circleCollider.enabled = true;
+
                 // Debug.Log("Collider enabled");
-                state = BubbleState.INSIDE;
+                //state = BubbleState.INSIDE;
+
 
                 break;
             }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
 
@@ -13,25 +14,25 @@ public class GameManager : MonoBehaviour
     public float doomScrolling = 0;
 
     // Initial values
-    private int totalAnxiety = 0;
-    private int totalDistrust = 0;
-    private int totalLoneliness = 0;
-    private int totalFomo = 0;
-    private int totalDoomScrolling = 0;
+    public float totalAnxiety = 0;
+    public float totalDistrust = 0;
+    public float totalLoneliness = 0;
+    public float totalFomo = 0;
+    public float totalDoomScrolling = 0;
 
     // Max values
-    private int maxAnxiety = 100;
-    private int maxDistrust = 100;
-    private int maxLoneliness = 100;
-    private int maxFomo = 100;
-    private int maxDoomScrolling = 100;
+    private float maxAnxiety = 100;
+    private float maxDistrust = 100;
+    private float maxLoneliness = 100;
+    private float maxFomo = 100;
+    private float maxDoomScrolling = 100;
 
     // Factor values
-    private float factorAnxiety = 0.01F;
-    private float factorDistrust = 0.01F;
-    private float factorLoneliness = 0.01F;
-    private float factorFomo = 0.01F;
-    private float factorDoomScrolling = 0.01F;
+    private float factorAnxiety = 0.01f;
+    private float factorDistrust = 0.01f;
+    private float factorLoneliness = 0.01f;
+    private float factorFomo = 0.01f;
+    private float factorDoomScrolling = 0.01f;
 
     public GameObject anxietySpike;
     public GameObject distrustSpike;
@@ -39,18 +40,34 @@ public class GameManager : MonoBehaviour
     public GameObject fomoSpike;
     public GameObject doomScrollingSpike;
 
-    public void AddValues(int anxiety, int distrust, int loneliness, int fomo, int doomScrolling) {
+    public static GameManager Instance;
+
+    private void Awake()
+    {
+        // If there is an instance, and it's not me, delete myself.
+
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            Instance = this;
+        }
+    }
+
+    public void AddValues(float anxiety, float distrust, float loneliness, float fomo, float doomScrolling) {
         totalAnxiety += anxiety;
         totalDistrust += distrust;
         totalLoneliness += loneliness;
         totalFomo += fomo;
         totalDoomScrolling += doomScrolling;
 
-        this.anxiety = totalAnxiety * factorAnxiety;
-        this.distrust = totalDistrust * factorDistrust;
-        this.loneliness = totalLoneliness * factorLoneliness;
-        this.fomo = totalFomo * factorFomo;
-        this.doomScrolling = totalDoomScrolling * factorDoomScrolling;
+        this.anxiety = totalAnxiety / maxAnxiety;// factorAnxiety;
+        this.distrust = totalDistrust / maxDistrust; //  * factorDistrust;
+        this.loneliness = totalLoneliness / maxLoneliness; // * factorLoneliness;
+        this.fomo = totalFomo / maxFomo; // * factorFomo;
+        this.doomScrolling = totalDoomScrolling / maxDoomScrolling; // * factorDoomScrolling;
 
         if (this.anxiety >= maxAnxiety || this.distrust >= maxDistrust || this.loneliness >= maxLoneliness || this.fomo >= maxFomo || this.doomScrolling >= maxDoomScrolling) {
             // Lost game

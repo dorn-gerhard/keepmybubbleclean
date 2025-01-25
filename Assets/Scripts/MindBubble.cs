@@ -14,7 +14,7 @@ public class MindBubble : MonoBehaviour
     public void OnTriggerEnter2D(Collider2D collision)
     {
         Bubble bubble = collision.GetComponent<Bubble>();
-        if ((bubble is not null) & (bubble.state == BubbleState.FLOATING))
+        if ((bubble is not null) && ((bubble.state == BubbleState.FLOATING) || (bubble.state == BubbleState.STICKY)))
         {
             // Debug.Log("Info bubble has hit mind bubble");
             StartCoroutine(collision.GetComponent<Bubble>().OnAttachedToMindBubble());
