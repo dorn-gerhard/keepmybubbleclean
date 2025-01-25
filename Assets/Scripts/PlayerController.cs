@@ -5,9 +5,11 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public GameObject selectedObject;
+    private Vector3 lastMousePosition;
+    public float movementThreshold = 0.07f;
     public void OnTouch()
     {
-        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector3 mousePosition = GetMouseWorldPosition();
         Collider2D targetObject = Physics2D.OverlapPoint(mousePosition);
         selectedObject = targetObject.gameObject;
 
@@ -15,7 +17,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector3 mousePosition = GetMouseWorldPosition();
         Vector3 offset = new Vector3();
         if (Input.GetMouseButtonDown(0))
         {
@@ -33,17 +35,34 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
-        if (Input.GetMouseButtonUp(0) && selectedObject)
-        {
-            selectedObject = null;
 
-        }
         if (selectedObject)
         {
-            
+            float distanceMoved = Vector3.Distance(mousePosition, lastMousePosition);
+            Debug.Log("moved this much in world space: " + distanceMoved);
 
             selectedObject.transform.position = new Vector3(mousePosition.x + offset.x, mousePosition.y + offset.y, selectedObject.transform.position.z);
+
+            if (Input.GetMouseButtonUp(0) || distanceMoved > movementThreshold)
+            {
+                Debug.Log("bubble released");
+                selectedObject = null;
+
+            }
         }
 
+        lastMousePosition = mousePosition;
+
+    }
+
+    Vector3 GetMouseWorldPosition()
+    {
+        // Get the mouse position in screen space
+        Vector3 screenPosition = Input.mousePosition;
+
+        // Convert the screen position to world space
+        // Set the z-distance based on the camera's distance to the objects you're interacting with
+        screenPosition.z = Mathf.Abs(Camera.main.transform.position.z); // Adjust as needed
+        return Camera.main.ScreenToWorldPoint(screenPosition);
     }
 }
