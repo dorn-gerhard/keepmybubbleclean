@@ -6,14 +6,14 @@ public class GameManager : MonoBehaviour
 {
     public float anxiety = 0;
     public float distrust = 0;
-    public float fomo = 0;
     public float loneliness = 0;
+    public float fomo = 0;
     public float doomScrolling = 0;
 
     public GameObject anxietySpike;
     public GameObject distrustSpike;
-    public GameObject fomoSpike;
     public GameObject lonelinessSpike;
+    public GameObject fomoSpike;
     public GameObject doomScrollingSpike;
 
     // Start is called before the first frame update
