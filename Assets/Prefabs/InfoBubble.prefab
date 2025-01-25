@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.8679245, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.8666667, g: 0, b: 0.58288634, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -103,6 +103,7 @@ MonoBehaviour:
   dragable: 1
   mystery: 1
   bubbleData: {fileID: 0}
+  applyImage: 0
 --- !u!50 &5823982825294926394
 Rigidbody2D:
   serializedVersion: 4
