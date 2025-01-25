@@ -56,6 +56,16 @@ public class PlayerController : MonoBehaviour
                 selectedObject = null;
 
             }
+
+            // If dragged over the waste bin, destroy the bubble
+            Collider2D secondTargetObject = Physics2D.OverlapPoint(mousePosition);
+            var wasteBin = secondTargetObject?.GetComponent<WasteBin>();
+            if (wasteBin)
+            {
+                // Debug.Log("waste bin selected");
+                Destroy(selectedObject);
+            }
+
         }
 
         lastMousePosition = mousePosition;
