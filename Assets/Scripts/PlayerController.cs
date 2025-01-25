@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
+        Vector3 offset = new Vector3();
         if (Input.GetMouseButtonDown(0))
         {
             Collider2D targetObject = Physics2D.OverlapPoint(mousePosition);
@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
             if (targetObject)
             {
                 selectedObject = targetObject.transform.gameObject;
+                offset = selectedObject.transform.position - mousePosition;
             }
         }
         if (Input.GetMouseButtonUp(0) && selectedObject)
@@ -33,9 +34,9 @@ public class PlayerController : MonoBehaviour
         }
         if (selectedObject)
         {
-            Vector3 offset = selectedObject.transform.position - mousePosition;
+            
 
-            selectedObject.transform.position = mousePosition + offset;
+            selectedObject.transform.position = new Vector3(mousePosition.x + offset.x, mousePosition.y + offset.y, selectedObject.transform.position.z);
         }
 
     }

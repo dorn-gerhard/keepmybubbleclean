@@ -10,9 +10,15 @@ public class Bubble : MonoBehaviour
 
     public bool mystery = true;
     public BubbleScriptableObject bubbleData;
+    public Rigidbody2D rigidbody;
+    public float floatingVelocity = 0.2f;
 
     public bool applyImage = false;
 
+    public void OnStart()
+    {
+        rigidbody = gameObject.GetComponent<Rigidbody2D>();
+    }
     public void OnValidate()
     {
         if (applyImage)
@@ -20,6 +26,8 @@ public class Bubble : MonoBehaviour
             SetImage();
         }
     }
+
+    
 
     public void SetImage()
     {
@@ -31,7 +39,16 @@ public class Bubble : MonoBehaviour
 
 
     }
-
+    public void Update()
+    {
+        if (state == BubbleState.FLOATING) // Add velocity to center
+        {
+            Vector2 velocity = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y);
+            velocity.Normalize();
+            gameObject.GetComponent<Rigidbody2D>().velocity = velocity * -floatingVelocity;
+        }
+    }
+   
     public static Texture2D RoundCrop(Texture2D sourceTexture)
     {
         int width = sourceTexture.width;
