@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class Bubble : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public BubbleState state = BubbleState.FLOATING;
+    public bool dragable = true; // basically defined by bubble state but helpful flag
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public bool mystery = true;
+    public BubbleScriptableObject bubbleData;
+
+    
+}
+
+public enum BubbleState {
+    FLOATING,   // fresh bubble (most of the time obfoscated
+    STICKY,     // attached to big mental bubble
+    WASHING,    // in washing machine
+    INSIDE,     // in big bubble (because accepted or invaded)
+    DECLINED    // dragged to wastebin
 }
