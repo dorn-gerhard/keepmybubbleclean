@@ -21,8 +21,7 @@ public class Bubble : MonoBehaviour
 
     public void Start()
     {
-        rigidbody = gameObject.GetComponent<Rigidbody2D>();
-        circleCollider = GetComponent<CircleCollider2D>();
+       
         SetImage();
 
     }
@@ -52,7 +51,7 @@ public class Bubble : MonoBehaviour
         {
             Vector2 velocity = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y);
             velocity.Normalize();
-            gameObject.GetComponent<Rigidbody2D>().velocity = velocity * -floatingVelocity;
+            rigidbody.velocity = velocity * -floatingVelocity;
         }
     }
 
