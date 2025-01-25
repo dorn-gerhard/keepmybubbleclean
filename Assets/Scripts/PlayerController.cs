@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
                 if ((bubble) &&
                     ((bubble.state == BubbleState.FLOATING || (bubble.state == BubbleState.STICKY))))
                 {
-                    Debug.Log("bubble selected");
+                    // Debug.Log("bubble selected");
                     selectedObject = targetObject.transform.gameObject;
                     offset = selectedObject.transform.position - mousePosition;
                 }
@@ -39,13 +39,13 @@ public class PlayerController : MonoBehaviour
         if (selectedObject)
         {
             float distanceMoved = Vector3.Distance(mousePosition, lastMousePosition);
-            Debug.Log("moved this much in world space: " + distanceMoved);
+            // Debug.Log("moved this much in world space: " + distanceMoved);
 
             selectedObject.transform.position = new Vector3(mousePosition.x + offset.x, mousePosition.y + offset.y, selectedObject.transform.position.z);
 
             if (Input.GetMouseButtonUp(0) || distanceMoved > movementThreshold)
             {
-                Debug.Log("bubble released");
+                // Debug.Log("bubble released");
                 selectedObject = null;
 
             }
