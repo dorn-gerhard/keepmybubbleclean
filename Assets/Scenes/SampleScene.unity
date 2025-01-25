@@ -757,6 +757,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 1982507780196324688, guid: d5114971be4c84ba187942618df61b77, type: 3}
+      propertyPath: anxiety
+      value: 1.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 1982507780196324688, guid: d5114971be4c84ba187942618df61b77, type: 3}
+      propertyPath: fomoSpike
+      value: 
+      objectReference: {fileID: 7832321920296198321}
+    - target: {fileID: 1982507780196324688, guid: d5114971be4c84ba187942618df61b77, type: 3}
+      propertyPath: anxietySpike
+      value: 
+      objectReference: {fileID: 7832321920296198323}
+    - target: {fileID: 1982507780196324688, guid: d5114971be4c84ba187942618df61b77, type: 3}
+      propertyPath: distrustSpike
+      value: 
+      objectReference: {fileID: 7832321920296198322}
+    - target: {fileID: 1982507780196324688, guid: d5114971be4c84ba187942618df61b77, type: 3}
+      propertyPath: lonelinessSpike
+      value: 
+      objectReference: {fileID: 7832321920296198320}
+    - target: {fileID: 1982507780196324688, guid: d5114971be4c84ba187942618df61b77, type: 3}
+      propertyPath: doomScrollingSpike
+      value: 
+      objectReference: {fileID: 7832321920296198319}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -983,15 +1007,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1656260741527715327, guid: bf126f1d8822643e0aa28aaf4d6d47e6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.2429444
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1656260741527715327, guid: bf126f1d8822643e0aa28aaf4d6d47e6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.01
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1656260741527715327, guid: bf126f1d8822643e0aa28aaf4d6d47e6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.009185064
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1656260741527715327, guid: bf126f1d8822643e0aa28aaf4d6d47e6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1025,11 +1049,41 @@ PrefabInstance:
       propertyPath: m_Name
       value: ScoreSpikes
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 3610229566011982431, guid: bf126f1d8822643e0aa28aaf4d6d47e6, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.49
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 5687915426986544304, guid: bf126f1d8822643e0aa28aaf4d6d47e6, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf126f1d8822643e0aa28aaf4d6d47e6, type: 3}
+--- !u!1 &7832321920296198319 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6687111922240192729, guid: bf126f1d8822643e0aa28aaf4d6d47e6, type: 3}
+  m_PrefabInstance: {fileID: 7832321920296198318}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7832321920296198320 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7112397875243683574, guid: bf126f1d8822643e0aa28aaf4d6d47e6, type: 3}
+  m_PrefabInstance: {fileID: 7832321920296198318}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7832321920296198321 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4685808374541673290, guid: bf126f1d8822643e0aa28aaf4d6d47e6, type: 3}
+  m_PrefabInstance: {fileID: 7832321920296198318}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7832321920296198322 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1608870771365825391, guid: bf126f1d8822643e0aa28aaf4d6d47e6, type: 3}
+  m_PrefabInstance: {fileID: 7832321920296198318}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7832321920296198323 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7760979161701887, guid: bf126f1d8822643e0aa28aaf4d6d47e6, type: 3}
+  m_PrefabInstance: {fileID: 7832321920296198318}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7881755774650798572
 PrefabInstance:
   m_ObjectHideFlags: 0
