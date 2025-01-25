@@ -32,7 +32,7 @@ public class Spawnmanager : MonoBehaviour
 
     public IEnumerator SpawnCounter(float waitTime)
     {
-        while (true && spawnedBubbles < 10)
+        while (true && spawnedBubbles < 25)
         {
             Spawn();
             yield return new WaitForSeconds(waitTime);
