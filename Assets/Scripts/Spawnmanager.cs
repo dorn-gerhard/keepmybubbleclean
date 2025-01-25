@@ -45,7 +45,7 @@ public class Spawnmanager : MonoBehaviour
         // choose new position
         float xPos = Random.Range(spawnArea.offsetMin.x, spawnArea.offsetMax.x);
         float yPos = Random.Range(spawnArea.offsetMin.y, spawnArea.offsetMax.y);
-        Debug.Log($"spawnArea: {spawnArea.offsetMin.x}");
+        // Debug.Log($"spawnArea: {spawnArea.offsetMin.x}");
        
         Bubble newBubble =  Instantiate(bubble,new Vector2(xPos,yPos), new Quaternion());
 

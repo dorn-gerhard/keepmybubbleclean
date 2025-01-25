@@ -59,18 +59,18 @@ public class Bubble : MonoBehaviour
         state = BubbleState.STICKY;
         // shring radius
         float radius = GetComponent<CircleCollider2D>().radius;
-        Debug.Log("start shrinking bubble Collider");
+        // Debug.Log("start shrinking bubble Collider");
         while (true)
         {
 
             if (circleCollider.radius < 0.01f)
             {
                 circleCollider.enabled = false;
-                Debug.Log("Collider disabled");
+                // Debug.Log("Collider disabled");
                 yield return new WaitForSeconds(1.5f);
                 circleCollider.radius = 0.5f;
                 circleCollider.enabled = true;
-                Debug.Log("Collider enabled");
+                // Debug.Log("Collider enabled");
                 state = BubbleState.INSIDE;
 
                 break;

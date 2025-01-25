@@ -16,7 +16,7 @@ public class MindBubble : MonoBehaviour
         Bubble bubble = collision.GetComponent<Bubble>();
         if ((bubble is not null) & (bubble.state == BubbleState.FLOATING))
         {
-            Debug.Log("Info bubble has hit mind bubble");
+            // Debug.Log("Info bubble has hit mind bubble");
             StartCoroutine(collision.GetComponent<Bubble>().OnAttachedToMindBubble());
         }
     }
