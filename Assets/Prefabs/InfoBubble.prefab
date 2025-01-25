@@ -103,6 +103,8 @@ MonoBehaviour:
   dragable: 1
   mystery: 1
   bubbleData: {fileID: 0}
+  rigidbody: {fileID: 0}
+  floatingVelocity: 0.5
   applyImage: 0
 --- !u!50 &5823982825294926394
 Rigidbody2D:
