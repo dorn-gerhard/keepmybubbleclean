@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{71ff32fd-81df-47e2-bfe0-27c30347e3a4}">
+		<property name="name">
+			<value>End Is Near</value>
+		</property>
+		<relationship name="folder">
+			<destination>{c18d4617-a7cb-4210-a529-2cddf893ac1e}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{3f72ec35-19a1-461a-97a5-9ad210bd3238}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{3f72ec35-19a1-461a-97a5-9ad210bd3238}">
+		<property name="maximum">
+			<value>100</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

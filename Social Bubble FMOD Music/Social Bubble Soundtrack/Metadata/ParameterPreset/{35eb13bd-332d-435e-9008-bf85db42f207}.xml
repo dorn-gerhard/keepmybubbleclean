@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{35eb13bd-332d-435e-9008-bf85db42f207}">
+		<property name="name">
+			<value>Doom Scroll</value>
+		</property>
+		<relationship name="folder">
+			<destination>{c18d4617-a7cb-4210-a529-2cddf893ac1e}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{623f805d-cf83-4075-a0cf-e2cfc7c0402a}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{623f805d-cf83-4075-a0cf-e2cfc7c0402a}">
+		<property name="maximum">
+			<value>100</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
