@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eb2513f8d4862464096a29ec456d0dcd, type: 3}
-  m_Name: 065_StudyGenetics
+  m_Name: 067_Poll
   m_EditorClassIdentifier: 
-  anxiety: 0
-  distrust: -2
+  anxiety: -2
+  distrust: -1
   fomo: 0
-  loneliness: 0
-  doomScrolling: 1
-  bubbleImage: {fileID: 21300000, guid: 6b20153cc15297d4eaa8c6fb90b6ffc5, type: 3}
+  loneliness: -1
+  doomScrolling: 2
+  bubbleImage: {fileID: 21300000, guid: 6d96904f31cdd3e4596b52483efc2b72, type: 3}
