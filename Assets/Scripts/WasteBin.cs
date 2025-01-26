@@ -25,7 +25,8 @@ public class WasteBin : MonoBehaviour
 
             Destroy(collision.gameObject);
 
-            StartCoroutine(EatingProcess(3f));
+            AudioManager.Instance.PlayEat();
+            StartCoroutine(EatingProcess(4.5f));
         }
     }
 
