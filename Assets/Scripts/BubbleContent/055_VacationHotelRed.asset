@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb2513f8d4862464096a29ec456d0dcd, type: 3}
   m_Name: 055_VacationHotelRed
   m_EditorClassIdentifier: 
-  anxiety: 0
-  distrust: 0
+  anxiety: -2
+  distrust: -1
   fomo: 2
   loneliness: 2
   doomScrolling: 1
