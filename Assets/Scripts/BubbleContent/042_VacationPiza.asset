@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 042_VacationPiza
   m_EditorClassIdentifier: 
   anxiety: 0
-  distrust: 0
+  distrust: -1
   fomo: 3
   loneliness: 3
   doomScrolling: 1
