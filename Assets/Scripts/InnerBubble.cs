@@ -11,7 +11,7 @@ public class InnerBubble : MonoBehaviour
         {
             bubble.state = BubbleState.INSIDE;
             GameManager.Instance.AddValues(bubble.bubbleData.anxiety, bubble.bubbleData.distrust, bubble.bubbleData.loneliness, bubble.bubbleData.fomo, bubble.bubbleData.doomScrolling);
-
+            bubble.isDraggable = false;
         }
     }
 }

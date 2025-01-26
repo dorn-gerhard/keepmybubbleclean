@@ -337,10 +337,10 @@ CircleCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -418,10 +418,10 @@ CircleCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -458,6 +458,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 5141940937325078133}
   isOpen: 1
   playerController: {fileID: 0}
+  washedBubble: {fileID: 0}
 --- !u!1 &4277662129822793587
 GameObject:
   m_ObjectHideFlags: 0

@@ -85,6 +85,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5274985254767103841}
   - component: {fileID: 1449657239021071692}
+  - component: {fileID: 1839759941853668983}
   m_Layer: 0
   m_Name: ImageBubble
   m_TagString: Untagged
@@ -159,6 +160,41 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &1839759941853668983
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1100546638989635676}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 128
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.02
 --- !u!1 &2032032539400401035
 GameObject:
   m_ObjectHideFlags: 0
@@ -212,7 +248,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 0
   isDragged: 0
-  mystery: 1
+  isDraggable: 1
+  isWashed: 0
   bubbleData: {fileID: 0}
   rigidbody: {fileID: 5823982825294926394}
   floatingVelocity: 0.5
@@ -258,10 +295,10 @@ CircleCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 192
+    m_Bits: 64
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2

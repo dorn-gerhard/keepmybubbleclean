@@ -9,8 +9,8 @@ public class Bubble : MonoBehaviour
 {
     public BubbleState state = BubbleState.FLOATING;
     public bool isDragged = false; // basically defined by bubble state but helpful flag
-
-    public bool mystery = true;
+    public bool isDraggable = true;
+    public bool isWashed = false;
     public BubbleScriptableObject bubbleData;
     public Rigidbody2D rigidbody;
     public float floatingVelocity = 0.2f;
@@ -88,13 +88,14 @@ public class Bubble : MonoBehaviour
        
 
     }
+
     async Task WaitForSecondsAsync(float delay)
     {
         await Task.Delay(TimeSpan.FromSeconds(delay));
     }
      
 
-public static Texture2D RoundCrop(Texture2D sourceTexture)
+    public static Texture2D RoundCrop(Texture2D sourceTexture)
     {
         int width = sourceTexture.width;
         int height = sourceTexture.height;
@@ -128,7 +129,18 @@ public static Texture2D RoundCrop(Texture2D sourceTexture)
         croppedTexture.Apply();
         return croppedTexture;
     }
+
+    public void SetRevealed()
+    {
+        SetImage();
+        Debug.Log("Show Stats");
+        state = BubbleState.FLOATING;
+        isWashed = true;
+        // Stats could be set to nicer values
+    }
 }
+
+
 
 public enum BubbleState {
     FLOATING,   // fresh bubble (most of the time obfoscated)

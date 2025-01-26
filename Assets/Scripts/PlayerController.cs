@@ -50,7 +50,7 @@ public class PlayerController : MonoBehaviour
 
             if (
                 Input.GetMouseButtonUp(0) || 
-                (distanceMoved > movementThreshold && dropQuickly)
+                (distanceMoved > movementThreshold && dropQuickly) || !selectedObject.GetComponent<Bubble>().isDraggable
             )
             {
                 // Debug.Log("bubble released");

@@ -52,9 +52,25 @@ MonoBehaviour:
   bubble: {fileID: 6267906251062789256, guid: d70ae8d6e907a4dca8b2fce906a5ccf0, type: 3}
   bubbleContent:
   - {fileID: 11400000, guid: ea879afe9ea764ca695ee8990c8417a1, type: 2}
-  - {fileID: 11400000, guid: ea879afe9ea764ca695ee8990c8417a1, type: 2}
-  - {fileID: 11400000, guid: ea879afe9ea764ca695ee8990c8417a1, type: 2}
   - {fileID: 11400000, guid: 23158b951bfc34e6a9579a869b975d4d, type: 2}
+  - {fileID: 11400000, guid: a90f28a91a0428e48b1ded54eed16a43, type: 2}
+  - {fileID: 11400000, guid: b14309424dc560f44b8262d4855ef1e4, type: 2}
+  - {fileID: 11400000, guid: 9cdaa5fd468acb043988c7716707cf47, type: 2}
+  - {fileID: 11400000, guid: ce6807038407e474882809f1c633b2fc, type: 2}
+  - {fileID: 11400000, guid: 1babf085ad4209540bbe9d097c922bef, type: 2}
+  - {fileID: 11400000, guid: bc2835d8d47cc46438b494c848d05745, type: 2}
+  - {fileID: 11400000, guid: be87bf7c09f5bfe478403df759f6d5fd, type: 2}
+  - {fileID: 11400000, guid: 36ceda0c308871047aef0885957390da, type: 2}
+  - {fileID: 11400000, guid: be2da14ccbc83d741bedb3a9919e1d4a, type: 2}
+  - {fileID: 11400000, guid: a5cedd1ebbd34814dbc3b548cb05760d, type: 2}
+  - {fileID: 11400000, guid: b6ff7ce7a8e129c418f7f7eeee029281, type: 2}
+  - {fileID: 11400000, guid: 240869564e320294894e2c8b1f49853b, type: 2}
+  - {fileID: 11400000, guid: 6bcbec989a31b4b4687ad63ae63b6f9d, type: 2}
+  - {fileID: 11400000, guid: 729eabc25439dc54191b8dc2f4ec0d5f, type: 2}
+  - {fileID: 11400000, guid: 246175cde7988d84b8bee637727a7055, type: 2}
+  - {fileID: 11400000, guid: 911aa41c3d0de0047aabc392b6c7a211, type: 2}
+  - {fileID: 11400000, guid: f2f9a8fe5fa5edf4392e6ca1f370e493, type: 2}
+  - {fileID: 11400000, guid: 3da21e46e0488fc4a910de55a5445dc4, type: 2}
   spawnNow: 0
   spawnedBubbles: 0
   spawnArea: {fileID: 0}
