@@ -138,6 +138,13 @@ public class Bubble : MonoBehaviour
         isWashed = true;
         // Stats could be set to nicer values
     }
+
+    public void DestroyWithEffect()
+    {
+        // Add animation
+
+        Destroy(this.gameObject);
+    }
 }
 
 
