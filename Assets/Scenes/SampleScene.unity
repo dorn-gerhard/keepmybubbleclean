@@ -122,6 +122,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &185406940 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5415971678582995767, guid: dd90e6a7d3b2d4a75a505f3b22137681, type: 3}
+  m_PrefabInstance: {fileID: 7194540676385449830}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &190597461
 GameObject:
   m_ObjectHideFlags: 0
@@ -347,6 +352,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nonRigidbodyVelocity: 0
+  attenuationObject: {fileID: 0}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -609,6 +616,22 @@ PrefabInstance:
     - target: {fileID: 936506901613753957, guid: 82f42760001514f0f80a2991dd6776c3, type: 3}
       propertyPath: m_Name
       value: PersonalBubble
+      objectReference: {fileID: 0}
+    - target: {fileID: 4142198621698144566, guid: 82f42760001514f0f80a2991dd6776c3, type: 3}
+      propertyPath: playerController
+      value: 
+      objectReference: {fileID: 185406940}
+    - target: {fileID: 6871033395030772209, guid: 82f42760001514f0f80a2991dd6776c3, type: 3}
+      propertyPath: m_Radius
+      value: 2.3360915
+      objectReference: {fileID: 0}
+    - target: {fileID: 6871033395030772209, guid: 82f42760001514f0f80a2991dd6776c3, type: 3}
+      propertyPath: m_Offset.x
+      value: 1.3368893
+      objectReference: {fileID: 0}
+    - target: {fileID: 6871033395030772209, guid: 82f42760001514f0f80a2991dd6776c3, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.2445221
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -9,7 +9,7 @@ public class WashingMachine : MonoBehaviour
     public Sprite spriteOpen;
     public Sprite spriteClosed;
     public SpriteRenderer spriteRenderer;
-    public Boolean isOpen = true;
+    public bool isOpen = true;
     public GameObject playerController;
 
     public Bubble washedBubble;
@@ -37,7 +37,7 @@ public class WashingMachine : MonoBehaviour
     {
         Debug.Log("Washing machine collision");
         Bubble bubble = collision.GetComponent<Bubble>();
-        if (bubble && (bubble.state == BubbleState.FLOATING || bubble.state == BubbleState.STICKY) && bubble.isDragged && !bubble.isWashed)
+        if (bubble && (bubble.state == BubbleState.FLOATING || bubble.state == BubbleState.STICKY) && bubble.isDragged && !bubble.isWashed && isOpen)
         {
             Debug.Log("Info bubble has hit washing machine");
 
@@ -64,7 +64,9 @@ public class WashingMachine : MonoBehaviour
         washedBubble.gameObject.SetActive(true);
         washedBubble.SetRevealed();
         spriteRenderer.sprite = spriteOpen;
-        
+        isOpen = true;
+
+
 
     }
 }
