@@ -56,6 +56,8 @@ public class WashingMachine : MonoBehaviour
 
             playerController.GetComponent<PlayerController>().selectedObject = null;
 
+            AudioManager.Instance.PlayScrub();
+            AudioManager.Instance.PlayBubble();
             StartCoroutine(WashingProcess(3.0f));
         }
 
