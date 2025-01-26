@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eb2513f8d4862464096a29ec456d0dcd, type: 3}
-  m_Name: 022_SkydiveSunset
+  m_Name: 039_StudyClimateChange
   m_EditorClassIdentifier: 
-  anxiety: 0
-  distrust: -2
-  fomo: 2
-  loneliness: 2
+  anxiety: 1
+  distrust: -4
+  fomo: 0
+  loneliness: 0
   doomScrolling: 1
-  bubbleImage: {fileID: 21300000, guid: 60d910152622f4ef29a3838e9d8062ef, type: 3}
+  bubbleImage: {fileID: 21300000, guid: 41e54420ca2994375a8c8ae4ad418b1c, type: 3}

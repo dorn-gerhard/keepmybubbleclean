@@ -15,6 +15,6 @@ MonoBehaviour:
   anxiety: 1
   distrust: 0
   fomo: -2
-  loneliness: 4
+  loneliness: 3
   doomScrolling: 1
   bubbleImage: {fileID: 21300000, guid: 521318a1522ad40c58849ab848131ea6, type: 3}

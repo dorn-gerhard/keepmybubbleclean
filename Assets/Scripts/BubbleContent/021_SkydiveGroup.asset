@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb2513f8d4862464096a29ec456d0dcd, type: 3}
   m_Name: 021_SkydiveGroup
   m_EditorClassIdentifier: 
-  anxiety: 0
+  anxiety: 2
   distrust: -2
-  fomo: 1
-  loneliness: 3
+  fomo: 0
+  loneliness: 2
   doomScrolling: 1
-  bubbleImage: {fileID: 21300000, guid: 60d910152622f4ef29a3838e9d8062ef, type: 3}
+  bubbleImage: {fileID: 21300000, guid: 6117045e274e047b3b4c59f3493ddd48, type: 3}
