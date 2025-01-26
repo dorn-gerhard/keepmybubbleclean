@@ -11,32 +11,52 @@ public class Spawnmanager : MonoBehaviour
     public float spawnTime = 3.0f;
     public Bubble bubble; // gameobject without values
     public List<BubbleScriptableObject> bubbleContent = new List<BubbleScriptableObject>();
-    public bool spawnNow;
+    public List<BubbleScriptableObject> listForSpawning = new List<BubbleScriptableObject>();
     public int spawnedBubbles = 0;
+    public bool spawningActive;
+    public int numberOfImages;
 
     public RectTransform spawnArea;
-    // Start is called before the first frame update
+    public static Spawnmanager Instance;
+
+    private void Awake()
+    {
+        // If there is an instance, and it's not me, delete myself.
+
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            Instance = this;
+        }
+
+    }
+
     void Start()
     {
         spawnArea = this.GetComponent<RectTransform>();
         bubbleContent.Shuffle();
-
-        StartCoroutine(SpawnCounter(spawnTime));
-            
+        numberOfImages = bubbleContent.Count;
+        
+        //StartSpawning();
 
     }
-    private void OnValidate()
+
+    public void StartSpawning()
     {
-        if (spawnNow)
-        {
-            Spawn();
-            spawnNow = false;
-        }
+        listForSpawning = bubbleContent.ToList();
+        listForSpawning.Shuffle();
+        spawnedBubbles = 0;
+        spawningActive = true;
+        StartCoroutine(SpawnCounter(spawnTime));
     }
+
 
     public IEnumerator SpawnCounter(float waitTime)
     {
-        while (true && spawnedBubbles < 20)
+        while (spawningActive && spawnedBubbles < numberOfImages)
         {
             Spawn();
             yield return new WaitForSeconds(waitTime);
@@ -54,8 +74,8 @@ public class Spawnmanager : MonoBehaviour
         Bubble newBubble =  Instantiate(bubble,new Vector2(xPos,yPos), new Quaternion());
 
         // Assign data:
-        var bubbleCont = bubbleContent[0];
-        bubbleContent.RemoveAt(0);
+        var bubbleCont = listForSpawning[0];
+        listForSpawning.RemoveAt(0);
         newBubble.bubbleData = bubbleCont;
         spawnedBubbles += 1;
         if (spawnedBubbles % 10 == 0)
