@@ -142,7 +142,7 @@ public class Bubble : MonoBehaviour
     public void DestroyWithEffect()
     {
         // Add animation
-
+        AudioManager.Instance.PlayBurst();
         Destroy(this.gameObject);
     }
 }
