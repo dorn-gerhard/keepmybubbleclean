@@ -15,6 +15,23 @@ public class AudioManager : MonoBehaviour
     [SerializeField][Range(0f, 100f)] private float anxiety;
     [SerializeField][Range(0f, 100f)] private float loneliness;
 
+    public static AudioManager Instance;
+
+    private void Awake()
+    {
+        // If there is an instance, and it's not me, delete myself.
+
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            Instance = this;
+        }
+
+    }
+
     public void PlayBGTheme()
     {
         // RuntimeManager.PlayOneShot(BGTheme);
