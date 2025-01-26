@@ -16,29 +16,41 @@ public class Bubble : MonoBehaviour
     public float floatingVelocity = 0.2f;
     public CircleCollider2D circleCollider;
     public SpriteRenderer renderer;
+    public Texture2D statImage;
+    public SpriteRenderer borderRenderer;
+    public SpriteRenderer transparentRenderer;
+    public SpriteRenderer highlightRenderer;
 
     public bool applyImage = false;
 
     public void Start()
     {
        
-        SetImage();
+        SetImage(false);
 
     }
     public void OnValidate()
     {
         if (applyImage)
         {
-            SetImage();
+            SetImage(true);
         }
     }
 
     
 
-    public void SetImage()
+    public void SetImage(bool showStats = false)
     {
-         // GetComponent<SpriteRenderer>();
-        Texture2D skin = bubbleData.bubbleImage.texture;
+        // GetComponent<SpriteRenderer>();
+        Texture2D skin;
+        if (!showStats)
+        {
+            skin = bubbleData.bubbleImage.texture;
+        }
+        else
+        {
+            skin = statImage;
+        }
         MaterialPropertyBlock block = new MaterialPropertyBlock();
         block.SetTexture("_MainTex", skin);
         renderer.SetPropertyBlock(block);
@@ -63,25 +75,33 @@ public class Bubble : MonoBehaviour
         // Debug.Log("start shrinking bubble Collider");
         while (true)
         {
-
-            if (circleCollider.radius < 0.01f)
+            if (state == BubbleState.STICKY)
             {
-                circleCollider.enabled = false;
-                // Debug.Log("Collider disabled");
-                yield return new WaitForSeconds(1.5f);
-                circleCollider.radius = 0.5f;
-                circleCollider.enabled = true;
+                if (circleCollider.radius < 0.01f)
+                {
+                    circleCollider.enabled = false;
+                    // Debug.Log("Collider disabled");
+                    yield return new WaitForSeconds(1.5f);
+                    circleCollider.radius = 0.5f;
+                    circleCollider.enabled = true;
 
-                // Debug.Log("Collider enabled");
-                //state = BubbleState.INSIDE;
+                    // Debug.Log("Collider enabled");
+                    //state = BubbleState.INSIDE;
 
 
-                break;
+                    break;
+                }
+                else
+                {
+                    yield return new WaitForSeconds(0.1f);
+                    circleCollider.radius -= 0.01f;
+                }
             }
             else
             {
-                yield return new WaitForSeconds(0.1f);
-                circleCollider.radius -= 0.01f;
+                circleCollider.radius = 0.5f;
+                circleCollider.enabled = true;
+                break;
             }
 
         }
@@ -114,7 +134,7 @@ public class Bubble : MonoBehaviour
             {
                 int colorIndex = (row * width) + column;
                 float pointDistance = Vector2.Distance(new Vector2(column, row), centerVector);
-                if (pointDistance < radius)
+                if (pointDistance <= radius)
                 {
                     croppedColorArray[colorIndex] = colorArray[colorIndex];
                 }
@@ -132,10 +152,14 @@ public class Bubble : MonoBehaviour
 
     public void SetRevealed()
     {
-        SetImage();
+        SetImage(true);
         Debug.Log("Show Stats");
         state = BubbleState.FLOATING;
         isWashed = true;
+        renderer.sortingOrder += 15;
+        borderRenderer.sortingOrder += 15;
+        transparentRenderer.sortingOrder += 15;
+        highlightRenderer.sortingOrder += 15;
         // Stats could be set to nicer values
     }
 

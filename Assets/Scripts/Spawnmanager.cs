@@ -4,6 +4,7 @@ using UnityEngine;
 using System.Linq;
 using System;
 using shuffle_list;
+using UnityEngine.UI;
 
 public class Spawnmanager : MonoBehaviour
 {
@@ -18,6 +19,16 @@ public class Spawnmanager : MonoBehaviour
 
     public RectTransform spawnArea;
     public static Spawnmanager Instance;
+
+    public Slider anxietySlider;
+    public Slider distrustSlider;
+    public Slider lonelinessSlider;
+    public Slider fomoSlider;
+
+    public RenderTexture rt;
+    public Camera camera;
+
+    public bool showStats;
 
     private void Awake()
     {
@@ -39,7 +50,14 @@ public class Spawnmanager : MonoBehaviour
         spawnArea = this.GetComponent<RectTransform>();
         bubbleContent.Shuffle();
         numberOfImages = bubbleContent.Count;
-        
+
+        // Set renderTexture and Camera Settings
+        rt = new RenderTexture(324, 324, 32, RenderTextureFormat.ARGB32);
+        rt.filterMode = FilterMode.Point;
+        rt.depthStencilFormat = UnityEngine.Experimental.Rendering.GraphicsFormat.D32_SFloat;
+
+        camera.targetTexture = rt;
+
         //StartSpawning();
 
     }
@@ -77,17 +95,29 @@ public class Spawnmanager : MonoBehaviour
         var bubbleCont = listForSpawning[0];
         listForSpawning.RemoveAt(0);
         newBubble.bubbleData = bubbleCont;
+
         spawnedBubbles += 1;
         if (spawnedBubbles % 10 == 0)
         {
             spawnTime -= 0.1f;
         }
+        // Add Stats image
+        anxietySlider.value = Math.Clamp(bubbleCont.anxiety, -5, 5);
+        distrustSlider.value = Math.Clamp(bubbleCont.distrust, -5, 5);
+        lonelinessSlider.value = Math.Clamp(bubbleCont.loneliness, -5, 5);
+        fomoSlider.value = Math.Clamp(bubbleCont.fomo, -5, 5);
 
+        Texture2D statImage = new Texture2D(rt.width, rt.height);
+        RenderTexture.active = rt;
+
+        statImage.ReadPixels(new Rect(0, 0, rt.width, rt.height), 0, 0);
+        statImage.Apply();
+        newBubble.statImage = statImage;
     }
 
 
+    
 
- 
 }
 
 namespace shuffle_list
