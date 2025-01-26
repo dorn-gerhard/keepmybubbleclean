@@ -49,9 +49,13 @@ public class WashingMachine : MonoBehaviour
             particleSystem.Play();
 
             bubble.state = BubbleState.WASHING;
+            bubble.rigidbody.velocity = new Vector3(0f, 0f, 0f);
             bubble.gameObject.transform.position = this.transform.position + new Vector3(0f, 1.55f, 0f);
-            bubble.gameObject.SetActive(false);
+
             bubble.isDragged = false;
+            
+            
+            bubble.gameObject.SetActive(false);
             washedBubble = bubble;
 
             playerController.GetComponent<PlayerController>().selectedObject = null;
@@ -67,6 +71,7 @@ public class WashingMachine : MonoBehaviour
     {
         yield return new WaitForSeconds(washingTime);
         washedBubble.gameObject.SetActive(true);
+        washedBubble.gameObject.transform.position = this.transform.position + new Vector3(0f, 1.55f, 0f);
         washedBubble.SetRevealed();
         spriteRenderer.sprite = spriteOpen;
         isOpen = true;
