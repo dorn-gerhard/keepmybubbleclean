@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb2513f8d4862464096a29ec456d0dcd, type: 3}
   m_Name: 054_VacationBeachMiramar
   m_EditorClassIdentifier: 
-  anxiety: 0
+  anxiety: -2
   distrust: 0
-  fomo: 2
+  fomo: 3
   loneliness: 2
   doomScrolling: 1
-  bubbleImage: {fileID: 21300000, guid: 568ec1f90bc13584b86f519c24b35743, type: 3}
+  bubbleImage: {fileID: 21300000, guid: 1e21ca0679dc6bc49bf8ae9aa6539c67, type: 3}
