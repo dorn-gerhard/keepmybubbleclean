@@ -9,6 +9,11 @@ public class AudioManager : MonoBehaviour
 {
     private EventInstance instance;
     [SerializeField] EventReference BGTheme;
+    [SerializeField] EventReference Bubble;
+    [SerializeField] EventReference Burst;
+    [SerializeField] EventReference Eat;
+    [SerializeField] EventReference Scrub;
+    [SerializeField] EventReference GameOver;
 
     [SerializeField][Range(0f, 100f)] private float fomo;
     [SerializeField][Range(0f, 100f)] private float distrust;
@@ -37,6 +42,31 @@ public class AudioManager : MonoBehaviour
         // RuntimeManager.PlayOneShot(BGTheme);
         instance = RuntimeManager.CreateInstance(BGTheme);
         instance.start();
+    }
+
+    public void PlayBubble()
+    {
+        RuntimeManager.PlayOneShot(Bubble);
+    }
+
+    public void PlayBurst()
+    {
+        RuntimeManager.PlayOneShot(Burst);
+    }
+
+    public void PlayEat()
+    {
+        RuntimeManager.PlayOneShot(Eat);
+    }
+
+    public void PlayScrub()
+    {
+        RuntimeManager.PlayOneShot(Scrub);
+    }
+
+    public void PlayGameOver()
+    {
+        RuntimeManager.PlayOneShot(GameOver);
     }
 
     // Start is called before the first frame update
