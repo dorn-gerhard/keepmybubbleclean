@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eb2513f8d4862464096a29ec456d0dcd, type: 3}
-  m_Name: 022_SkydiveSunset
+  m_Name: 031_JeffreyDahmer
   m_EditorClassIdentifier: 
-  anxiety: 0
-  distrust: -2
-  fomo: 2
-  loneliness: 2
+  anxiety: 4
+  distrust: 1
+  fomo: -2
+  loneliness: 0
   doomScrolling: 1
-  bubbleImage: {fileID: 21300000, guid: 60d910152622f4ef29a3838e9d8062ef, type: 3}
+  bubbleImage: {fileID: 21300000, guid: 3b1e1980aa4674bb8a694112ebd42a56, type: 3}

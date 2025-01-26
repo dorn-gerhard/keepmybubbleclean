@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb2513f8d4862464096a29ec456d0dcd, type: 3}
   m_Name: 024_SwingHairGirl
   m_EditorClassIdentifier: 
-  anxiety: -3
+  anxiety: -2
   distrust: 0
   fomo: 0
   loneliness: -2
-  doomScrolling: 1
+  doomScrolling: 2
   bubbleImage: {fileID: 21300000, guid: f5a5acce7f53047609f60a25af57a072, type: 3}

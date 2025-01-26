@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eb2513f8d4862464096a29ec456d0dcd, type: 3}
-  m_Name: 022_SkydiveSunset
+  m_Name: 041_GlobalGameJam
   m_EditorClassIdentifier: 
-  anxiety: 0
-  distrust: -2
+  anxiety: -2
+  distrust: 0
   fomo: 2
-  loneliness: 2
+  loneliness: -4
   doomScrolling: 1
-  bubbleImage: {fileID: 21300000, guid: 60d910152622f4ef29a3838e9d8062ef, type: 3}
+  bubbleImage: {fileID: 21300000, guid: 65889019c28424b7faecfe8b80d08b31, type: 3}

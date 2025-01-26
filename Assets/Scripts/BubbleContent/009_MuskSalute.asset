@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 009_MuskSalute
   m_EditorClassIdentifier: 
   anxiety: 5
-  distrust: 0
+  distrust: 1
   fomo: 0
   loneliness: -1
   doomScrolling: 1
