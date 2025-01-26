@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using FMOD.Studio;
@@ -19,6 +20,8 @@ public class AudioManager : MonoBehaviour
     [SerializeField][Range(0f, 100f)] private float distrust;
     [SerializeField][Range(0f, 100f)] private float anxiety;
     [SerializeField][Range(0f, 100f)] private float loneliness;
+    [SerializeField][Range(0f, 100f)] private float doomScroll;
+    [SerializeField][Range(0f, 100f)] private float endIsNear;
 
     public static AudioManager Instance;
 
@@ -82,10 +85,18 @@ public class AudioManager : MonoBehaviour
         distrust = Mathf.Clamp(GameManager.Instance.distrust, 0, 1) * 100;
         loneliness = Mathf.Clamp(GameManager.Instance.loneliness, 0, 1) * 100;
         fomo = Mathf.Clamp(GameManager.Instance.fomo, 0, 1) * 100;
+        doomScroll = Mathf.Clamp(GameManager.Instance.doomScrolling, 0, 1) * 100;
+
+        float[] allValues = new float[5]{anxiety, distrust, loneliness, fomo, doomScroll};
+
+        var highest = Mathf.Max(allValues);
+        endIsNear = highest;
     
         instance.setParameterByName("FOMO", fomo);
         instance.setParameterByName("Disstrust", distrust);
         instance.setParameterByName("Loneliness", anxiety);
         instance.setParameterByName("Anxiety", loneliness);
+        instance.setParameterByName("Doom Scroll", doomScroll);
+        instance.setParameterByName("End is Near", endIsNear);
     }
 }
