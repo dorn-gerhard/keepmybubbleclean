@@ -9,7 +9,7 @@ public class WasteBin : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
         Bubble bubble = collision.GetComponent<Bubble>();
-        if (bubble && bubble.state == BubbleState.FLOATING && bubble.isDragged)
+        if (bubble && (bubble.state == BubbleState.FLOATING || bubble.state == BubbleState.STICKY) && bubble.isDragged)
         {
             Debug.Log("Info bubble has hit wast bin");
             Destroy(collision.gameObject);
