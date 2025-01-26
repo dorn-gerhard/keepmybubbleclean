@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb2513f8d4862464096a29ec456d0dcd, type: 3}
   m_Name: 014_CatSushi
   m_EditorClassIdentifier: 
-  anxiety: -3
-  distrust: -1
+  anxiety: -4
+  distrust: 1
   fomo: 1
   loneliness: -1
   doomScrolling: 3

@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eb2513f8d4862464096a29ec456d0dcd, type: 3}
-  m_Name: 013_CatIceCream
+  m_Name: 062_ElefantsInterview
   m_EditorClassIdentifier: 
-  anxiety: -3
-  distrust: 1
-  fomo: 1
-  loneliness: -2
-  doomScrolling: 3
-  bubbleImage: {fileID: 21300000, guid: 65748c769ec974ae081bacac5516da0c, type: 3}
+  anxiety: 1
+  distrust: -3
+  fomo: 0
+  loneliness: -1
+  doomScrolling: 1
+  bubbleImage: {fileID: 21300000, guid: 70d3982a4dedee24a8560a9b76c62d49, type: 3}

@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eb2513f8d4862464096a29ec456d0dcd, type: 3}
-  m_Name: 013_CatIceCream
+  m_Name: 061_Antigone
   m_EditorClassIdentifier: 
-  anxiety: -3
-  distrust: 1
-  fomo: 1
+  anxiety: -2
+  distrust: -2
+  fomo: 0
   loneliness: -2
-  doomScrolling: 3
-  bubbleImage: {fileID: 21300000, guid: 65748c769ec974ae081bacac5516da0c, type: 3}
+  doomScrolling: 1
+  bubbleImage: {fileID: 21300000, guid: 882927243ffb6e94f819a455501d6650, type: 3}
