@@ -7,9 +7,12 @@ public class WasteBin : MonoBehaviour
 {
     public Sprite spriteOpen;
     public Sprite spriteClosed;
+    public Sprite spriteBig;
+
     public SpriteRenderer spriteRenderer;
 
     public bool isEating = false;
+    public bool isBig = true;
 
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -28,6 +31,21 @@ public class WasteBin : MonoBehaviour
 
     IEnumerator EatingProcess(float washingTime)
     {
+        var shortTime = 0.3f;
+        
+        while (washingTime > 0) {
+            yield return new WaitForSeconds(shortTime);
+
+            if (isBig) {
+                spriteRenderer.sprite = spriteClosed;
+            } else {
+                spriteRenderer.sprite = spriteBig;
+            }
+
+            isBig = !isBig;
+            washingTime -= shortTime;
+        }
+
         yield return new WaitForSeconds(washingTime);
         spriteRenderer.sprite = spriteOpen;
         isEating = false;
