@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{ba2dd37b-e691-4f88-becf-947d41abf358}">
+		<property name="name">
+			<value>Anxiety</value>
+		</property>
+		<relationship name="folder">
+			<destination>{c18d4617-a7cb-4210-a529-2cddf893ac1e}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{30000ff5-49f1-4e81-bb64-7fb5120b21e5}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{30000ff5-49f1-4e81-bb64-7fb5120b21e5}">
+		<property name="maximum">
+			<value>100</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="seekSpeed">
+			<value>11</value>
+		</property>
+	</object>
+</objects>

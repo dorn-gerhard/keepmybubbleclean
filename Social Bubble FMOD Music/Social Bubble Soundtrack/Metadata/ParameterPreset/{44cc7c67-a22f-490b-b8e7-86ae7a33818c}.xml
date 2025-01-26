@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{44cc7c67-a22f-490b-b8e7-86ae7a33818c}">
+		<property name="name">
+			<value>Loneliness</value>
+		</property>
+		<relationship name="folder">
+			<destination>{c18d4617-a7cb-4210-a529-2cddf893ac1e}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{86c9b114-f43d-4cc3-baac-9fd70d7c0e79}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{86c9b114-f43d-4cc3-baac-9fd70d7c0e79}">
+		<property name="maximum">
+			<value>100</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="seekSpeed">
+			<value>11</value>
+		</property>
+	</object>
+</objects>
