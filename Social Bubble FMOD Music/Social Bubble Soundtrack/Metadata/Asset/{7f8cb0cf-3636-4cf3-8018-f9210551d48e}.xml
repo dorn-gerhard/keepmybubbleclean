@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="EncodableAsset" id="{7f8cb0cf-3636-4cf3-8018-f9210551d48e}">
+		<property name="assetPath">
+			<value>Bubble Sounds/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{ab1e9e80-7df8-45e9-b817-387b9a9731bf}</destination>
+		</relationship>
+	</object>
+</objects>

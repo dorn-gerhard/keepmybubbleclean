@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{40ea38e0-a274-43f8-93aa-11e2a100843b}">
+		<property name="assetPath">
+			<value>Eating Sounds/Eating Sound 6.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>2.9721541950113379</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{ab1e9e80-7df8-45e9-b817-387b9a9731bf}</destination>
+		</relationship>
+	</object>
+</objects>

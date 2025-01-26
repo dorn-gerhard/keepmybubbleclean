@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{641b46f4-cdb6-4022-9f59-a67100b5c7c8}">
 		<property name="assetPath">
-			<value>Social Bubble_Misstrust.wav</value>
+			<value>Social Bubble Music/Social Bubble_Misstrust.wav</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>

@@ -51,6 +51,41 @@ MonoBehaviour:
       Data3: -1196789057
       Data4: -1185817776
     Path: event:/Music
+  Bubble:
+    Guid:
+      Data1: 52766174
+      Data2: 1147155594
+      Data3: -1782583628
+      Data4: -2110825451
+    Path: event:/Bubble Sounds
+  Burst:
+    Guid:
+      Data1: -655407654
+      Data2: 1292046249
+      Data3: -346894932
+      Data4: -618411166
+    Path: event:/Bubble Burst
+  Eat:
+    Guid:
+      Data1: -2244255
+      Data2: 1126747533
+      Data3: 581213346
+      Data4: -1488132943
+    Path: event:/Fact Check (Eating)
+  Scrub:
+    Guid:
+      Data1: 435833042
+      Data2: 1273365134
+      Data3: 1530407574
+      Data4: -381965069
+    Path: event:/Scrubbing
+  GameOver:
+    Guid:
+      Data1: -256457667
+      Data2: 1223962051
+      Data3: -767139946
+      Data4: -2103985258
+    Path: event:/Game Over
   fomo: 0
   distrust: 0
   anxiety: 0

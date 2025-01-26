@@ -202,7 +202,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteOpen: {fileID: 21300000, guid: 67f899bd48362474997686d3bac58ff0, type: 3}
   spriteClosed: {fileID: 21300000, guid: 85a9b180c07e4433e9a36766262c7267, type: 3}
+  spriteBig: {fileID: 21300000, guid: 7e49fe834fff64085a1510830836a7bf, type: 3}
   spriteRenderer: {fileID: 2313375800233587}
+  isEating: 0
+  isBig: 0
 --- !u!58 &3066046964953922590
 CircleCollider2D:
   m_ObjectHideFlags: 0

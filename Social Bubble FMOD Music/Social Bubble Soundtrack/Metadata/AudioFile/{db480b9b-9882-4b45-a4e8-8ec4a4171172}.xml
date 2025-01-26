@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{db480b9b-9882-4b45-a4e8-8ec4a4171172}">
+		<property name="assetPath">
+			<value>Bubble Sounds/Bubble Sounds_Bubbles Short 1_A.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>3.3975056689342402</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{ab1e9e80-7df8-45e9-b817-387b9a9731bf}</destination>
+		</relationship>
+	</object>
+</objects>

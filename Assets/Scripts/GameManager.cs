@@ -140,6 +140,8 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         Debug.Log("Gameover");
+        AudioManager.Instance.PlayGameOver();
+
         Spawnmanager.Instance.spawningActive = false;
         var bubbleList = new List<Bubble>(FindObjectsOfType<Bubble>());
         for (int k = 0; k < bubbleList.Count; k++)

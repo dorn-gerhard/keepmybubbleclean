@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="EncodableAsset" id="{e5eaead9-18b1-4e82-a13a-7a2340b97b65}">
+		<property name="assetPath">
+			<value>Social Bubble Music/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{ab1e9e80-7df8-45e9-b817-387b9a9731bf}</destination>
+		</relationship>
+	</object>
+</objects>
