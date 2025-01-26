@@ -11,6 +11,7 @@ public class WashingMachine : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public bool isOpen = true;
     public GameObject playerController;
+    public ParticleSystem particleSystem;
 
     public Bubble washedBubble;
     // Start is called before the first frame update
@@ -35,15 +36,17 @@ public class WashingMachine : MonoBehaviour
     
     void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Washing machine collision");
+        // Debug.Log("Washing machine collision");
         Bubble bubble = collision.GetComponent<Bubble>();
         if (bubble && (bubble.state == BubbleState.FLOATING || bubble.state == BubbleState.STICKY) && bubble.isDragged && !bubble.isWashed && isOpen)
         {
-            Debug.Log("Info bubble has hit washing machine");
+            // Debug.Log("Info bubble has hit washing machine");
 
             // spriteRenderer.sprite = spriteClosed;
             isOpen = false;
             spriteRenderer.sprite = spriteClosed;
+
+            particleSystem.Play();
 
             bubble.state = BubbleState.WASHING;
             bubble.gameObject.transform.position = this.transform.position + new Vector3(0f, 1.55f, 0f);
