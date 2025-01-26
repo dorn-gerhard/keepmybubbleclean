@@ -279,7 +279,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3525678461573789672, guid: 662a7a5738928433194fb9fa80cfcc4b, type: 3}
       propertyPath: m_Value
-      value: 0.35
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4563041500941934574, guid: 662a7a5738928433194fb9fa80cfcc4b, type: 3}
       propertyPath: m_Sprite
@@ -405,6 +405,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 610245432576127093, guid: 662a7a5738928433194fb9fa80cfcc4b, type: 3}
       propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3525678461573789672, guid: 662a7a5738928433194fb9fa80cfcc4b, type: 3}
+      propertyPath: m_Value
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4563041500941934574, guid: 662a7a5738928433194fb9fa80cfcc4b, type: 3}
@@ -535,7 +539,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3525678461573789672, guid: 662a7a5738928433194fb9fa80cfcc4b, type: 3}
       propertyPath: m_Value
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3525678461573789672, guid: 662a7a5738928433194fb9fa80cfcc4b, type: 3}
       propertyPath: m_Colors.m_ColorMultiplier
@@ -661,6 +665,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 610245432576127093, guid: 662a7a5738928433194fb9fa80cfcc4b, type: 3}
       propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3525678461573789672, guid: 662a7a5738928433194fb9fa80cfcc4b, type: 3}
+      propertyPath: m_Value
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4563041500941934574, guid: 662a7a5738928433194fb9fa80cfcc4b, type: 3}

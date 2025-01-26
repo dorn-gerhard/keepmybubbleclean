@@ -653,7 +653,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1982507780196324688, guid: d5114971be4c84ba187942618df61b77, type: 3}
       propertyPath: maxDistrust
-      value: 20
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1982507780196324688, guid: d5114971be4c84ba187942618df61b77, type: 3}
       propertyPath: anxietySpike
@@ -665,7 +665,7 @@ PrefabInstance:
       objectReference: {fileID: 7832321920296198322}
     - target: {fileID: 1982507780196324688, guid: d5114971be4c84ba187942618df61b77, type: 3}
       propertyPath: maxLoneliness
-      value: 20
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1982507780196324688, guid: d5114971be4c84ba187942618df61b77, type: 3}
       propertyPath: lonelinessSpike
@@ -673,7 +673,7 @@ PrefabInstance:
       objectReference: {fileID: 7832321920296198320}
     - target: {fileID: 1982507780196324688, guid: d5114971be4c84ba187942618df61b77, type: 3}
       propertyPath: maxDoomScrolling
-      value: 20
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 1982507780196324688, guid: d5114971be4c84ba187942618df61b77, type: 3}
       propertyPath: doomScrollingSpike
@@ -1014,6 +1014,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3050594452192128647, guid: eb5586aad54b84a2eb0615b81fe7e894, type: 3}
+      propertyPath: m_TargetTexture
+      value: 
+      objectReference: {fileID: 8400000, guid: d04c57222a12b439e9a83cf88be87970, type: 2}
     - target: {fileID: 3200595958065047195, guid: eb5586aad54b84a2eb0615b81fe7e894, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1085,6 +1089,10 @@ PrefabInstance:
     - target: {fileID: 7510531882227414009, guid: eb5586aad54b84a2eb0615b81fe7e894, type: 3}
       propertyPath: m_AnchorMin.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8998512283098670670, guid: eb5586aad54b84a2eb0615b81fe7e894, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -5,6 +5,7 @@ using System.Linq;
 using System;
 using shuffle_list;
 using UnityEngine.UI;
+using System.Threading.Tasks;
 
 public class Spawnmanager : MonoBehaviour
 {
@@ -56,6 +57,14 @@ public class Spawnmanager : MonoBehaviour
         rt.filterMode = FilterMode.Point;
         rt.depthStencilFormat = UnityEngine.Experimental.Rendering.GraphicsFormat.D32_SFloat;
 
+        float avgAnxiety = bubbleContent.Select(x => x.anxiety).ToArray().Sum()/numberOfImages;
+        float avgLoneliness = bubbleContent.Select(x => x.loneliness).ToArray().Sum() / numberOfImages;
+        float avgDistrust = bubbleContent.Select(x => x.distrust).ToArray().Sum() / numberOfImages;
+        float avgFomo = bubbleContent.Select(x => x.fomo).ToArray().Sum() / numberOfImages;
+        float avgDoomScrolling = bubbleContent.Select(x => x.doomScrolling).ToArray().Sum() / numberOfImages;
+
+        Debug.Log($"Anxiety: {avgAnxiety}, Loneliness: {avgLoneliness}, Distrust: {avgDistrust}, Fomo: {avgFomo}, DoomScrolling: {avgDoomScrolling}");
+
         camera.targetTexture = rt;
 
         //StartSpawning();
@@ -82,7 +91,7 @@ public class Spawnmanager : MonoBehaviour
     }
   
 
-    public void Spawn()
+    public async void Spawn()
     {
         // choose new position
         float xPos = UnityEngine.Random.Range(spawnArea.offsetMin.x, spawnArea.offsetMax.x);
@@ -102,18 +111,36 @@ public class Spawnmanager : MonoBehaviour
             spawnTime -= 0.1f;
         }
         // Add Stats image
+
+        //await WaitFrames(2);
         anxietySlider.value = Math.Clamp(bubbleCont.anxiety, -5, 5);
         distrustSlider.value = Math.Clamp(bubbleCont.distrust, -5, 5);
         lonelinessSlider.value = Math.Clamp(bubbleCont.loneliness, -5, 5);
         fomoSlider.value = Math.Clamp(bubbleCont.fomo, -5, 5);
+        await WaitFrames(2);
+        camera.targetTexture = rt;
 
         Texture2D statImage = new Texture2D(rt.width, rt.height);
+        //await WaitFrames(1);
         RenderTexture.active = rt;
 
         statImage.ReadPixels(new Rect(0, 0, rt.width, rt.height), 0, 0);
         statImage.Apply();
         newBubble.statImage = statImage;
+      
     }
+
+
+    public static async Task WaitFrames(int frameCount)
+    {
+        while (frameCount > 0)
+        {
+            frameCount--;
+            await Task.Yield();
+        }
+    }
+
+
 
 
     
