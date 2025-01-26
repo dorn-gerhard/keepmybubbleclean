@@ -9,17 +9,20 @@ public class WasteBin : MonoBehaviour
     public Sprite spriteClosed;
     public SpriteRenderer spriteRenderer;
 
+    public bool isEating = false;
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         Bubble bubble = collision.GetComponent<Bubble>();
-        if (bubble && (bubble.state == BubbleState.FLOATING || bubble.state == BubbleState.STICKY) && bubble.isDragged)
+        if (bubble && (bubble.state == BubbleState.FLOATING || bubble.state == BubbleState.STICKY) && bubble.isDragged && !isEating)
         {
-            Debug.Log("Info bubble has hit wast bin");
+            // Debug.Log("Info bubble has hit wast bin");
             spriteRenderer.sprite = spriteClosed;
+            isEating = true;
 
             Destroy(collision.gameObject);
 
-            StartCoroutine(EatingProcess(0.5f));
+            StartCoroutine(EatingProcess(3f));
         }
     }
 
@@ -27,6 +30,7 @@ public class WasteBin : MonoBehaviour
     {
         yield return new WaitForSeconds(washingTime);
         spriteRenderer.sprite = spriteOpen;
+        isEating = false;
     }
     // Start is called before the first frame update
     void Start()
