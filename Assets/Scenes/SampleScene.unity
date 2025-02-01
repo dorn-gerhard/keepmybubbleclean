@@ -1107,6 +1107,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3523064296951238273, guid: dd90e6a7d3b2d4a75a505f3b22137681, type: 3}
+      propertyPath: movementThreshold
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 5415971678582995767, guid: dd90e6a7d3b2d4a75a505f3b22137681, type: 3}
       propertyPath: m_Name
       value: PlayerController

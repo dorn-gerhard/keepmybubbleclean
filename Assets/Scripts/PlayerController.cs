@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     public GameObject selectedObject;
     private Vector3 lastMousePosition;
-    public float movementThreshold = 0.07f;
+    public float movementThreshold = 0.5f;
     public void OnTouch()
     {
         Vector3 mousePosition = GetMouseWorldPosition();
@@ -50,7 +50,7 @@ public class PlayerController : MonoBehaviour
 
             if (
                 Input.GetMouseButtonUp(0) || 
-                (distanceMoved > movementThreshold && dropQuickly) || !selectedObject.GetComponent<Bubble>().isDraggable
+                ((distanceMoved > movementThreshold) && dropQuickly) || !selectedObject.GetComponent<Bubble>().isDraggable
             )
             {
                 // Debug.Log("bubble released");
